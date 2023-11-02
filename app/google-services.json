@@ -1,0 +1,267 @@
+{
+  "project_info": {
+    "project_number": "1066932702409",
+    "firebase_url": "https://nfcstar-firebase.firebaseio.com",
+    "project_id": "nfcstar-firebase",
+    "storage_bucket": "nfcstar-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1066932702409:android:3649b8ac5487979e1ed118",
+        "android_client_info": {
+          "package_name": "com.nfcstar.nkiosk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1066932702409-ip8ft45rgiaqn02bprtkdhikcm2u9jla.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMQR0AxM41ZmHs9ECIXNNKERe1mIRKRQc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1066932702409-ip8ft45rgiaqn02bprtkdhikcm2u9jla.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1066932702409-ki2kj6c26dvnso2u952v48nu1dhpbi68.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "kr.com.NSTAR"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1066932702409:android:b0918360144ad7b81ed118",
+        "android_client_info": {
+          "package_name": "com.nfcstar.norder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1066932702409-ip8ft45rgiaqn02bprtkdhikcm2u9jla.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMQR0AxM41ZmHs9ECIXNNKERe1mIRKRQc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1066932702409-ip8ft45rgiaqn02bprtkdhikcm2u9jla.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1066932702409-ki2kj6c26dvnso2u952v48nu1dhpbi68.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "kr.com.NSTAR"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1066932702409:android:8f5b01db8b0124f7",
+        "android_client_info": {
+          "package_name": "com.nfcstar.nstar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1066932702409-cda7f9elbs1ma3l68b76ue1utva0tjih.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nfcstar.nstar",
+            "certificate_hash": "b9780ab74a6cb0a4cd94616df776a1a77a749028"
+          }
+        },
+        {
+          "client_id": "1066932702409-rdpjku050h6vjnsvs5aqk6lp2upv0oct.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nfcstar.nstar",
+            "certificate_hash": "ce9933cd0a7537aa7f1f326ee70d76ac1ea1167c"
+          }
+        },
+        {
+          "client_id": "1066932702409-ip8ft45rgiaqn02bprtkdhikcm2u9jla.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMQR0AxM41ZmHs9ECIXNNKERe1mIRKRQc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1066932702409-ip8ft45rgiaqn02bprtkdhikcm2u9jla.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1066932702409-ki2kj6c26dvnso2u952v48nu1dhpbi68.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "kr.com.NSTAR"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1066932702409:android:253dc4aecc35ec92",
+        "android_client_info": {
+          "package_name": "com.nfcstar.nstaralarm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1066932702409-pvisp0q154qa2j06un4u8u80utkil8fc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nfcstar.nstaralarm",
+            "certificate_hash": "ce9933cd0a7537aa7f1f326ee70d76ac1ea1167c"
+          }
+        },
+        {
+          "client_id": "1066932702409-ip8ft45rgiaqn02bprtkdhikcm2u9jla.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMQR0AxM41ZmHs9ECIXNNKERe1mIRKRQc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1066932702409-ip8ft45rgiaqn02bprtkdhikcm2u9jla.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1066932702409-ki2kj6c26dvnso2u952v48nu1dhpbi68.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "kr.com.NSTAR"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1066932702409:android:b1a60a0e3c0b4270",
+        "android_client_info": {
+          "package_name": "com.nfcstar.nstarpos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1066932702409-00q1vnit66icv84bt4t6f0qb4jukbj6p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nfcstar.nstarpos",
+            "certificate_hash": "42fb1343d3f77dd454fb9f594206233d2f5818cf"
+          }
+        },
+        {
+          "client_id": "1066932702409-lh5tp1ke4of24t8lqbgqepasljpvmiof.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nfcstar.nstarpos",
+            "certificate_hash": "ce9933cd0a7537aa7f1f326ee70d76ac1ea1167c"
+          }
+        },
+        {
+          "client_id": "1066932702409-ip8ft45rgiaqn02bprtkdhikcm2u9jla.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMQR0AxM41ZmHs9ECIXNNKERe1mIRKRQc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1066932702409-ip8ft45rgiaqn02bprtkdhikcm2u9jla.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1066932702409-ki2kj6c26dvnso2u952v48nu1dhpbi68.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "kr.com.NSTAR"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1066932702409:android:cb7ee05f1778b2ac1ed118",
+        "android_client_info": {
+          "package_name": "com.nfcstar.selfisolate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1066932702409-ip8ft45rgiaqn02bprtkdhikcm2u9jla.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMQR0AxM41ZmHs9ECIXNNKERe1mIRKRQc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1066932702409-ip8ft45rgiaqn02bprtkdhikcm2u9jla.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1066932702409-ki2kj6c26dvnso2u952v48nu1dhpbi68.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "kr.com.NSTAR"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
