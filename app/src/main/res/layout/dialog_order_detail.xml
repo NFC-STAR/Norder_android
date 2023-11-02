@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="1100px"
+    android:layout_height="wrap_content"
+    android:layout_margin="30px"
+    android:background="@drawable/shp_c25_rect"
+    android:minHeight="667px">
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/large_text_default01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37px"
+        android:layout_marginTop="25px"
+        android:textColor="#000000"
+        android:text="주문 내역"
+        android:textSize="37px"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/lay_close"
+        android:layout_width="58px"
+        android:layout_height="58px"
+        android:layout_marginEnd="30px"
+        app:layout_constraintBottom_toTopOf="@id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="27px"
+            android:layout_height="27px"
+            android:layout_centerInParent="true"
+            android:src="@drawable/out_close" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="25px"
+        android:background="#CCCCCC"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rc_order_detail"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_marginStart="37px"
+        android:layout_marginEnd="33px"
+        android:paddingBottom="29px"
+        app:layout_constraintBottom_toTopOf="@id/view2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="3px"
+        android:layout_marginTop="25px"
+        android:layout_marginBottom="22px"
+        android:background="#CCCCCC"
+        app:layout_constraintBottom_toTopOf="@id/txt_totamt" />
+
+    <TextView
+        android:id="@+id/textView4"
+        style="@style/large_text_default01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="49px"
+        android:text="총 주문 금액"
+        android:textSize="29px"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/txt_totamt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txt_totamt" />
+
+    <TextView
+        android:id="@+id/txt_totamt"
+        style="@style/large_text_default01"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20px"
+        android:layout_marginEnd="34px"
+        android:layout_marginBottom="34px"
+        android:gravity="right"
+        android:text="-- 원"
+        android:textColor="@color/coral_red"
+        android:textSize="35px"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txt_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/txt_close"
+        style="@style/large_text_default01"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="@drawable/shp_bottom_button"
+        android:gravity="center"
+        android:text="닫기"
+        android:textColor="#ffffff"
+        android:textSize="32px"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_empty"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:text="주문하신 내역이 없습니다."
+        android:textSize="20px"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/rc_order_detail"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

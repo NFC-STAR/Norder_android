@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shp_c30_white_border"
+    tools:context=".CustomNoOptionDialog">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="433px"
+        android:layout_height="0px"
+        android:layout_marginStart="67px"
+        android:layout_marginTop="67px"
+        android:minWidth="100px"
+        app:cardCornerRadius="20px"
+        app:layout_constraintDimensionRatio="W,1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_prdimg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shp_c25_rect"
+            android:scaleType="centerCrop" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="633px"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55px"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="@+id/cardView">
+
+        <TextView
+            android:id="@+id/txt_prdnam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="바닐라 카페라떼"
+            android:textColor="#333333"
+            android:textSize="37px"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_prdexp"
+            android:layout_width="600px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20px"
+            android:text="달달한 바닐라라떼! 과하지않은 단맛으로 부담없이 즐기실 수 있어요."
+            android:textColor="#333333"
+            android:textSize="27px"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_prdnam" />
+
+        <TextView
+            android:id="@+id/txt_prdamt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="167px"
+            android:text="3,500원"
+            android:textColor="#333333"
+            android:textSize="30px"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@id/txt_prdnam" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="28px"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="27px"
+            android:layout_height="27px"
+            android:src="@drawable/out_close" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_close"
+        android:layout_width="253px"
+        android:layout_height="100px"
+        android:layout_marginEnd="13px"
+        android:background="@drawable/shp_c50_s1_coral"
+        android:gravity="center"
+        android:text="닫기"
+        android:textColor="@color/coral_red"
+        android:textSize="33px"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_order_fin"
+        app:layout_constraintEnd_toStartOf="@+id/btn_order_fin"
+        app:layout_constraintTop_toTopOf="@+id/btn_order_fin" />
+
+
+    <Button
+        android:id="@+id/btn_order_fin"
+        android:layout_width="wrap_content"
+        android:layout_height="100px"
+        android:layout_marginBottom="37px"
+        android:background="@drawable/shp_c50_coral"
+        android:gravity="center"
+        android:minWidth="333px"
+        android:layout_marginTop="100px"
+        android:paddingStart="80px"
+        android:paddingEnd="80px"
+        android:text="16,000원 담기"
+        android:textColor="#ffffff"
+        android:textSize="33px"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

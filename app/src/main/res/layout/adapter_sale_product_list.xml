@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15px">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/lay_prdimg"
+        android:layout_width="157px"
+        android:layout_height="0px"
+        android:layout_marginBottom="15px"
+        app:cardCornerRadius="20px"
+        app:layout_constraintDimensionRatio="W,1:1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txt_prdnam">
+
+        <ImageView
+            android:id="@+id/iv_prdimg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/txt_prdnam"
+        style="@style/large_text_default01"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20px"
+        android:layout_marginStart="15px"
+        android:text="상품 명"
+        android:textStyle="bold"
+        android:textSize="32px"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_delect"
+
+        app:layout_constraintEnd_toStartOf="@+id/txt_delect"
+        app:layout_constraintStart_toEndOf="@+id/lay_prdimg"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_delect"
+        style="@style/medium_text_default01"
+        android:text="삭제"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24px"
+        android:minHeight="47px"
+        android:paddingTop="3px"
+        android:paddingBottom="3px"
+        android:paddingStart="8px"
+        android:paddingEnd="8px"
+        android:textColor="@color/coral_red"
+        android:background="@drawable/shp_c20_coral_rect"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_option"
+        style="@style/medium_text_default01"
+        android:layout_width="0px"
+        android:layout_marginTop="10px"
+        android:layout_marginEnd="10px"
+        android:layout_marginStart="15px"
+        android:textSize="24px"
+        android:text="옵션 명"
+        app:layout_constraintEnd_toStartOf="@+id/txt_prdamt"
+        app:layout_constraintStart_toEndOf="@+id/lay_prdimg"
+        app:layout_constraintTop_toBottomOf="@+id/txt_prdnam" />
+
+
+    <TextView
+        android:id="@+id/txt_prdamt"
+        style="@style/medium_text_default01"
+        android:text="10,000 원"
+        android:textSize="24px"
+        app:layout_constraintBaseline_toBaselineOf="@id/txt_option"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_sumamt"
+        style="@style/large_text_default01"
+        android:layout_width="0px"
+        android:layout_marginStart="15px"
+        android:layout_marginTop="20px"
+        android:gravity="right|center_vertical"
+        android:textSize="31px"
+        android:text="10,000 원"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_plus"
+        app:layout_constraintTop_toBottomOf="@+id/txt_option" />
+
+    <ImageView
+        android:id="@+id/iv_minus"
+        android:layout_width="67px"
+        android:layout_height="53px"
+        android:padding="21px"
+        android:layout_marginStart="15px"
+        android:background="@drawable/shp_c24_gray_rect"
+        android:src="@drawable/out_min"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_salqty"
+        app:layout_constraintStart_toEndOf="@+id/lay_prdimg"
+        app:layout_constraintTop_toTopOf="@+id/txt_salqty" />
+
+    <TextView
+        android:id="@+id/txt_salqty"
+        style="@style/large_text_default01"
+        android:layout_marginStart="10px"
+        android:gravity="center"
+        android:minWidth="24px"
+        android:text="1"
+        android:textSize="27px"
+        app:layout_constraintBaseline_toBaselineOf="@id/txt_sumamt"
+        app:layout_constraintStart_toEndOf="@+id/iv_minus" />
+
+    <ImageView
+        android:id="@+id/iv_plus"
+        android:layout_width="67px"
+        android:layout_height="53px"
+        android:padding="13px"
+        android:layout_marginStart="10px"
+        android:background="@drawable/shp_c24_gray_rect"
+        android:src="@drawable/out_plus"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_salqty"
+        app:layout_constraintStart_toEndOf="@+id/txt_salqty"
+        app:layout_constraintTop_toTopOf="@+id/txt_salqty" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:layout_marginTop="33px"
+        android:background="#999999"
+        android:layout_marginBottom="27px"
+        app:layout_constraintTop_toBottomOf="@+id/txt_sumamt"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

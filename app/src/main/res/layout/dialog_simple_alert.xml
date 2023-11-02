@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="50px"
+    android:layout_gravity="center"
+    android:background="#ffffff"
+    app:cardCornerRadius="20px">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txt_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:padding="30px"
+            android:minHeight="130px"
+            android:minWidth="250px"
+            android:text="asdf"
+            android:textColor="@color/black"
+            android:textSize="20px"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="0px"
+            android:layout_height="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="#cccccc"
+            app:layout_constraintBottom_toTopOf="@id/lay_bottom"/>
+
+
+        <LinearLayout
+            android:id="@+id/lay_bottom"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/txt_msg"
+            app:layout_constraintStart_toStartOf="@+id/txt_msg"
+            app:layout_constraintTop_toBottomOf="@+id/txt_msg">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="0px"
+                android:layout_height="60px"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:textStyle="bold"
+                android:text="취소"
+                android:textColor="#000000"
+                android:textSize="18px" />
+
+            <Button
+                android:id="@+id/btn_ok"
+                android:layout_width="0px"
+                android:layout_height="60px"
+                android:layout_weight="1"
+                android:background="@color/coral_red"
+                android:textStyle="bold"
+                android:text="확인"
+                android:textColor="#ffffff"
+                android:textSize="18px" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

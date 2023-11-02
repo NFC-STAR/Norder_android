@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shp_c25_rect"
+    android:minWidth="800px"
+    android:maxHeight="673px"
+    android:orientation="vertical"
+    app:cardCornerRadius="25px">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lay_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="37px"
+            android:layout_marginTop="25px">
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/large_text_default01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="직원호출"
+                android:textSize="37px"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/large_text_default01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="13px"
+                android:text="호출 내용을 눌러주세요."
+                android:textSize="27px"
+                android:textColor="#737373"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@id/textView2"
+                app:layout_constraintStart_toEndOf="@id/textView2"/>
+
+            <RelativeLayout
+                android:id="@+id/lay_close"
+                android:layout_width="58px"
+                android:layout_height="58px"
+                android:layout_marginEnd="30px"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/out_close" />
+
+            </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/lay_top"
+            android:layout_marginTop="23dp"
+            android:layout_marginBottom="37dp"
+            android:background="#CCCCCC"
+            app:layout_constraintBottom_toTopOf="@id/rc_call_list"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lay_top" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rc_call_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/txt_close"
+            android:layout_below="@id/view"
+            android:layout_marginStart="37dp"
+            android:layout_marginEnd="37dp"
+            android:layout_marginBottom="37dp"
+            android:layout_centerHorizontal="true"
+            android:minHeight="500dp"/>
+
+        <TextView
+            android:id="@+id/txt_close"
+            style="@style/large_text_default01"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/second"
+            android:gravity="center"
+            android:text="닫기"
+            android:visibility="gone"
+            android:textColor="#ffffff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shp_c30_white_border"
+    android:orientation="horizontal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="533px"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="333px"
+            android:layout_height="0px"
+            android:layout_marginTop="40px"
+            android:minWidth="100px"
+            app:cardCornerRadius="20px"
+            app:layout_constraintDimensionRatio="W,1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_prdimg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shp_c25_rect"
+                android:scaleType="centerCrop" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txt_prdnam"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40px"
+            android:text="옵션을 선택해주세요."
+            android:textColor="#000000"
+            android:textSize="31px"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/cardView"
+            app:layout_constraintStart_toStartOf="@+id/cardView"
+            app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+        <TextView
+            android:id="@+id/txt_prdexp"
+            style="@style/medium_text_default01"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15px"
+            android:minHeight="60px"
+            android:text="달달한 바닐라라떼! 과하지않은 단맛으로 부담없이 즐기실 수 있어요."
+            android:textColor="#3D3C3C"
+            android:textSize="24px"
+            app:layout_constraintEnd_toEndOf="@+id/cardView"
+            app:layout_constraintStart_toStartOf="@+id/cardView"
+            app:layout_constraintTop_toBottomOf="@+id/txt_prdnam" />
+
+        <TextView
+            android:id="@+id/txt_prdamt"
+            style="@style/medium_text_default01"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26px"
+            android:layout_marginEnd="10px"
+            android:layout_marginBottom="25px"
+            android:text="3,500원"
+            android:textColor="#000000"
+            android:textSize="31px"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/cardView"
+            app:layout_constraintStart_toStartOf="@+id/cardView"
+            app:layout_constraintTop_toBottomOf="@id/txt_prdexp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#eeeeee" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="667px"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/lay_opt_select"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_marginStart="27px"
+            android:layout_marginTop="40px"
+            android:layout_marginEnd="27px"
+            android:layout_marginBottom="20px"
+            app:layout_constraintBottom_toTopOf="@+id/btn_close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/lay_option"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shp_c25_rect"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/layout_prddtl1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shp_option_border"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/txt_dtlnum1"
+                        style="@style/textview_default01"
+                        android:visibility="gone" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="87px">
+
+                        <TextView
+                            android:id="@+id/txt_dtlnam1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="32px"
+                            android:text="옵션 선택"
+                            android:textColor="#000000"
+                            android:textSize="31px"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/iv_option_open1"
+                            android:layout_width="27px"
+                            android:layout_height="15px"
+                            android:layout_marginEnd="32px"
+                            android:background="@drawable/out_under_chk"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <TextView
+                        android:id="@+id/txt_totamt1"
+                        style="@style/textview_default01"
+                        android:visibility="gone" />
+
+                    <View
+                        android:id="@+id/line_option1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E9E9E9"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:id="@+id/lay_select_prddtl1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32px"
+                        android:layout_marginEnd="32px"
+                        android:layout_marginBottom="14px"
+                        android:background="@drawable/shp_option_select"
+                        android:minHeight="85px"
+                        android:padding="5px"
+                        android:layout_marginTop="10px"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/img_opt_select1"
+                            android:layout_width="47px"
+                            android:layout_height="47px"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="19px"
+                            android:layout_marginEnd="17px"
+                            android:layout_marginRight="10px"
+                            android:background="@drawable/out_rect_chk" />
+
+                        <TextView
+                            android:id="@+id/txt_dtlnam_select1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@id/txt_totamt_select1"
+                            android:layout_toRightOf="@id/img_opt_select1"
+                            android:gravity="center_vertical"
+                            android:minHeight="38px"
+                            android:text="아메리카노 HOT"
+                            android:textColor="#000000"
+                            android:textSize="31px" />
+
+                        <TextView
+                            android:id="@+id/txt_totamt_select1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="27px"
+                            android:text="-500 원"
+                            android:textColor="#000000"
+                            android:textSize="28px" />
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_option_list_item1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="32px"
+                        android:layout_marginEnd="32px"
+                        android:layout_marginBottom="7px"
+                        android:orientation="vertical"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_prddtl2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11px"
+                    android:background="@drawable/shp_option_border"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/txt_dtlnum2"
+                        style="@style/textview_default01"
+                        android:visibility="gone" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="87px">
+
+                        <TextView
+                            android:id="@+id/txt_dtlnam2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="32px"
+                            android:text="옵션 선택2"
+                            android:textColor="#000000"
+                            android:textSize="31px"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/iv_option_open2"
+                            android:layout_width="27px"
+                            android:layout_height="15px"
+                            android:layout_marginEnd="32px"
+                            android:background="@drawable/out_under_chk"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <TextView
+                        android:id="@+id/txt_totamt2"
+                        style="@style/textview_default01"
+                        android:visibility="gone" />
+
+                    <View
+                        android:id="@+id/line_option2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E9E9E9"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:id="@+id/lay_select_prddtl2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10px"
+                        android:layout_marginStart="32px"
+                        android:layout_marginEnd="32px"
+                        android:layout_marginBottom="14px"
+                        android:background="@drawable/shp_option_select"
+                        android:minHeight="85px"
+                        android:padding="5px"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/img_opt_select2"
+                            android:layout_width="47px"
+                            android:layout_height="47px"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="19px"
+                            android:layout_marginEnd="17px"
+                            android:layout_marginRight="10px"
+                            android:background="@drawable/out_rect_chk"
+                            android:contentDescription="TODO" />
+
+                        <TextView
+                            android:id="@+id/txt_dtlnam_select2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@id/txt_totamt_select2"
+                            android:layout_toRightOf="@id/img_opt_select2"
+                            android:gravity="center_vertical"
+                            android:minHeight="38px"
+                            android:text="아메리카노 HOT"
+                            android:textColor="#000000"
+                            android:textSize="31px" />
+
+                        <TextView
+                            android:id="@+id/txt_totamt_select2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="27px"
+                            android:text="-500 원"
+                            android:textColor="#000000"
+                            android:textSize="28px" />
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_option_list_item2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="32px"
+                        android:layout_marginEnd="32px"
+                        android:layout_marginBottom="7px"
+                        android:orientation="vertical"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_prddtl3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11px"
+                    android:background="@drawable/shp_option_border"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/txt_dtlnum3"
+                        style="@style/textview_default01"
+                        android:visibility="gone" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="87px">
+
+                        <TextView
+                            android:id="@+id/txt_dtlnam3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="32px"
+                            android:text="옵션 선택"
+                            android:textColor="#000000"
+                            android:textSize="31px"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/iv_option_open3"
+                            android:layout_width="27px"
+                            android:layout_height="15px"
+                            android:layout_marginEnd="32px"
+                            android:background="@drawable/out_under_chk"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <TextView
+                        android:id="@+id/txt_totamt3"
+                        style="@style/textview_default01"
+                        android:visibility="gone" />
+
+                    <View
+                        android:id="@+id/line_option3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E9E9E9"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:id="@+id/lay_select_prddtl3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32px"
+                        android:layout_marginEnd="32px"
+                        android:layout_marginBottom="14px"
+                        android:background="@drawable/shp_option_select"
+                        android:minHeight="85px"
+                        android:padding="5px"
+                        android:layout_marginTop="10px"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/img_opt_select3"
+                            android:layout_width="47px"
+                            android:layout_height="47px"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="19px"
+                            android:layout_marginEnd="17px"
+                            android:layout_marginRight="10px"
+                            android:background="@drawable/out_rect_chk"
+                            android:contentDescription="TODO" />
+
+                        <TextView
+                            android:id="@+id/txt_dtlnam_select3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@id/txt_totamt_select3"
+                            android:layout_toRightOf="@id/img_opt_select3"
+                            android:gravity="center_vertical"
+                            android:minHeight="38px"
+                            android:text="아메리카노 HOT"
+                            android:textColor="#000000"
+                            android:textSize="31px" />
+
+                        <TextView
+                            android:id="@+id/txt_totamt_select3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="27px"
+                            android:text="-500 원"
+                            android:textColor="#000000"
+                            android:textSize="28px"/>
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_option_list_item3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="32px"
+                        android:layout_marginEnd="32px"
+                        android:layout_marginBottom="7px"
+                        android:orientation="vertical"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btn_close"
+            android:layout_width="253px"
+            android:layout_height="87px"
+            android:layout_marginStart="29px"
+            android:layout_marginBottom="23px"
+            android:background="@drawable/shp_c50_s1_coral"
+            android:gravity="center"
+            android:text="닫기"
+            android:textColor="@color/coral_red"
+            android:textSize="33px"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btn_order_fin"
+            android:layout_width="0px"
+            android:layout_height="87px"
+            android:layout_marginStart="11px"
+            android:layout_marginEnd="29px"
+            android:background="@drawable/shp_c50_coral"
+            android:gravity="center"
+            android:minWidth="333px"
+            android:paddingStart="7px"
+            android:paddingEnd="7px"
+            android:text="담기"
+            android:textColor="#ffffff"
+            android:textSize="33px"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_close" />
+
+        <TextView
+            android:id="@+id/txt_msg"
+            style="@style/medium_text_default01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shp_option_warning"
+            android:paddingStart="10px"
+            android:paddingTop="5px"
+            android:paddingEnd="10px"
+            android:paddingBottom="5px"
+            android:textSize="24px"
+            android:text=" "
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/btn_order_fin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

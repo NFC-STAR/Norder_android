@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="30px"
+    android:layout_height="match_parent">
+    <!--
+    <ScrollView
+        android:id="@+id/lay_opt_select"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="60px"
+        android:layout_marginBottom="30px"
+        android:layout_marginStart="40px"
+        android:layout_marginEnd="40px"
+        app:layout_constraintBottom_toTopOf="@+id/btn_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+-->
+        <LinearLayout
+            android:id="@+id/lay_option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shp_c25_rect"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layout_prddtl1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shp_option_border"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/txt_dtlnum1"
+                    style="@style/textview_default01"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/txt_dtlnam1"
+                    style="@style/spinner_default01"
+                    android:layout_width="match_parent"
+                    android:layout_height="86px"
+                    android:minHeight="50px"
+                    android:paddingStart="32px"
+                    android:text="옵션 선택"
+                    android:textColor="#000000"
+                    android:textSize="30px"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_totamt1"
+                    style="@style/textview_default01"
+                    android:visibility="gone" />
+
+                <View
+                    android:id="@+id/line_option1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E9E9E9"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/lay_select_prddtl1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32px"
+                    android:layout_marginTop="14px"
+                    android:layout_marginEnd="32px"
+                    android:layout_marginBottom="14px"
+                    android:background="@drawable/shp_option_select"
+                    android:minHeight="80px"
+                    android:padding="5px"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/img_opt_select1"
+                        android:layout_width="70px"
+                        android:layout_height="70px"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="28px"
+                        android:layout_marginEnd="26px"
+                        android:layout_marginRight="10px"
+                        android:background="@drawable/out_rect_chk"
+                        android:contentDescription="TODO" />
+
+                    <TextView
+                        android:id="@+id/txt_dtlnam_select1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/txt_totamt_select1"
+                        android:layout_toRightOf="@id/img_opt_select1"
+                        android:gravity="center_vertical"
+                        android:minHeight="38px"
+                        android:text="아메리카노 HOT"
+                        android:textColor="#000000"
+                        android:textSize="46px" />
+
+                    <TextView
+                        android:id="@+id/txt_totamt_select1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="40px"
+                        android:text="-500 원"
+                        android:textColor="#000000"
+                        android:textSize="42px" />
+
+
+
+                </RelativeLayout>
+                <LinearLayout
+                    android:id="@+id/layout_option_list_item1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="48px"
+                    android:layout_marginEnd="48px"
+                    android:orientation="vertical"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_prddtl2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17px"
+                android:background="@drawable/shp_option_border"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/txt_dtlnum2"
+                    style="@style/textview_default01"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/txt_dtlnam2"
+                    style="@style/spinner_default01"
+                    android:layout_width="match_parent"
+                    android:layout_height="130px"
+                    android:minHeight="50px"
+                    android:paddingStart="48px"
+                    android:text="옵션 선택2"
+                    android:textColor="#000000"
+                    android:textSize="46px"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_totamt2"
+                    style="@style/textview_default01"
+                    android:visibility="gone" />
+
+                <View
+                    android:id="@+id/line_option2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E9E9E9"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/lay_select_prddtl2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48px"
+                    android:layout_marginTop="21px"
+                    android:layout_marginEnd="48px"
+                    android:layout_marginBottom="21px"
+                    android:background="@drawable/shp_option_select"
+                    android:minHeight="120px"
+                    android:padding="5px"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/img_opt_select2"
+                        android:layout_width="70px"
+                        android:layout_height="70px"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="28px"
+                        android:layout_marginEnd="26px"
+                        android:layout_marginRight="10px"
+                        android:background="@drawable/out_rect_chk"
+                        android:contentDescription="TODO" />
+
+                    <TextView
+                        android:id="@+id/txt_dtlnam_select2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/txt_totamt_select2"
+                        android:layout_toRightOf="@id/img_opt_select2"
+                        android:gravity="center_vertical"
+                        android:minHeight="38px"
+                        android:text="아메리카노 HOT"
+                        android:textColor="#000000"
+                        android:textSize="46px" />
+
+                    <TextView
+                        android:id="@+id/txt_totamt_select2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="40px"
+                        android:text="-500 원"
+                        android:textColor="#000000"
+                        android:textSize="42px" />
+
+
+
+                </RelativeLayout>
+                <LinearLayout
+                    android:id="@+id/layout_option_list_item2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="48px"
+                    android:layout_marginEnd="48px"
+                    android:orientation="vertical"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_prddtl3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17px"
+                android:background="@drawable/shp_option_border"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/txt_dtlnum3"
+                    style="@style/textview_default01"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/txt_dtlnam3"
+                    style="@style/spinner_default01"
+                    android:layout_width="match_parent"
+                    android:layout_height="130px"
+                    android:minHeight="50px"
+                    android:paddingStart="48px"
+                    android:text="옵션 선택3"
+                    android:textColor="#000000"
+                    android:textSize="46px"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_totamt3"
+                    style="@style/textview_default01"
+                    android:visibility="gone" />
+
+                <View
+                    android:id="@+id/line_option3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E9E9E9"
+                    android:visibility="gone"/>
+
+                <RelativeLayout
+                    android:id="@+id/lay_select_prddtl3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48px"
+                    android:layout_marginTop="21px"
+                    android:layout_marginEnd="48px"
+                    android:layout_marginBottom="21px"
+                    android:background="@drawable/shp_option_select"
+                    android:minHeight="120px"
+                    android:padding="5px"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/img_opt_select3"
+                        android:layout_width="70px"
+                        android:layout_height="70px"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="28px"
+                        android:layout_marginEnd="26px"
+                        android:layout_marginRight="10px"
+                        android:background="@drawable/out_rect_chk"
+                        android:contentDescription="TODO" />
+
+                    <TextView
+                        android:id="@+id/txt_dtlnam_select3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/txt_totamt_select3"
+                        android:layout_toRightOf="@id/img_opt_select3"
+                        android:gravity="center_vertical"
+                        android:minHeight="38px"
+                        android:text="아메리카노 HOT"
+                        android:textColor="#000000"
+                        android:textSize="46px" />
+
+                    <TextView
+                        android:id="@+id/txt_totamt_select3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="40px"
+                        android:text="-500 원"
+                        android:textColor="#000000"
+                        android:textSize="42px" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_option_list_item3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="48px"
+                        android:layout_marginEnd="48px"
+                        android:orientation="vertical"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    <!--
+    </ScrollView>
+-->
+
+</LinearLayout>

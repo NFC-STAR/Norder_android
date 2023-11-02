@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/option_item_shape"
+        android:state_pressed="true">
+        <shape android:shape="rectangle" >
+            <stroke android:width="2dp" android:color="@color/coral_red" />
+            <padding
+                android:bottom="2px"
+                android:left="2px"
+                android:right="2px"
+                android:top="2px"/>
+            <solid android:color="@color/coral_red" />
+            <corners android:radius="11px"/>
+        </shape>
+    </item>
+</layer-list>

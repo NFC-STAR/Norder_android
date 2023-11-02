@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="50px"
+    app:cardCornerRadius="25px">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:minWidth="400px">
+
+
+        <TextView
+            android:id="@+id/txt_prdnam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30px"
+            android:layout_marginTop="25px"
+            android:layout_marginEnd="20px"
+            android:text=""
+            android:textColor="#333333"
+            android:textSize="20px"
+            android:textStyle="bold"
+
+            app:layout_constraintEnd_toStartOf="@+id/btn_close"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="650px"
+            android:layout_height="0px"
+            android:layout_marginStart="100px"
+            android:layout_marginTop="100px"
+            android:layout_marginEnd="30px"
+            android:minWidth="100px"
+            app:cardCornerRadius="20px"
+            app:layout_constraintDimensionRatio="W,1:1"
+            app:layout_constraintEnd_toStartOf="@+id/btn_close"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_prdnam">
+
+            <ImageView
+                android:id="@+id/iv_prdimg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shp_c25_rect"
+                android:scaleType="centerCrop" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txt_prdexp"
+            style="@style/medium_text_default01"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="25dp"
+            android:maxWidth="300dp"
+            android:background="@drawable/shp_c10_s1_rect"
+            android:minHeight="60dp"
+            android:padding="13dp"
+            android:text=""
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_order_fin"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <Button
+            android:id="@+id/btn_close"
+            android:layout_width="150dp"
+            android:layout_height="0dp"
+            android:background="@color/second"
+            android:drawableTint="@color/second"
+
+            android:text="닫기"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_order_fin"
+            android:layout_width="150dp"
+            android:layout_height="0dp"
+            android:background="@color/sgreen"
+            android:drawableTint="@color/sgreen"
+
+            android:text="상품추가"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline4"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

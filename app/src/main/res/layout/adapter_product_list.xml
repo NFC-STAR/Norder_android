@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lay_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shp_prdlist_rect"
+    android:layout_margin="5px"
+    android:elevation="5px"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/lay_prdimg"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:scaleType="centerCrop"
+        android:clipToOutline="true"
+        android:background="@drawable/shp_prdimg_rect"
+        app:layout_constraintDimensionRatio="W,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_prdamt"
+        style="@style/large_text_default01"
+        android:layout_width="0px"
+        android:gravity="center"
+        android:maxLines="2"
+        android:text="1000000 원"
+        android:background="#80000000"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:padding="5px"
+        android:textSize="26px"
+        app:layout_constraintBottom_toBottomOf="@+id/lay_prdimg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_prdnam"
+        style="@style/medium_text_default01"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:minHeight="50px"
+        android:textSize="26px"
+        android:text="카페아메리카노(2Shot)\n카페아메리카노(2Shot)"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="10px"
+        app:layout_constraintTop_toBottomOf="@+id/lay_prdimg" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    app:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_prdnam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="20dp"
+            android:text="옵션을 선택해주세요."
+            android:textColor="#333333"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:id="@+id/lay_opt_select"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/lay_option"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/layout_prddtl1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/txt_dtlnum1"
+                        style="@style/textview_default01"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txt_dtlnam1"
+                        style="@style/spinner_default01"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#666666"
+                        android:minHeight="50dp"
+                        android:textColor="#ffffff"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_totamt1"
+                        style="@style/textview_default01"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lay_select_prddtl1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_prddtl1"
+                    android:background="@drawable/shape_border_productview_list_item"
+                    android:padding="5dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/img_opt_select1"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/shape_option_select"
+                        android:contentDescription="TODO" />
+
+                    <TextView
+                        android:id="@+id/txt_dtlnam_select1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/txt_totamt_select1"
+                        android:layout_toRightOf="@id/img_opt_select1"
+                        android:gravity="center_vertical"
+                        android:minHeight="38dp"
+                        android:text="아메리카노 HOT"
+                        android:textColor="#333333"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/txt_totamt_select1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="-500 원"
+                        android:textColor="#333333"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/layout_option_list_item1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/lay_select_prddtl1"
+
+                    android:orientation="vertical"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/layout_prddtl2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_option_list_item1"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/txt_dtlnum2"
+                        style="@style/textview_default01"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txt_dtlnam2"
+                        style="@style/spinner_default01"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#666666"
+                        android:minHeight="50dp"
+                        android:textColor="#ffffff"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_totamt2"
+                        style="@style/textview_default01"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lay_select_prddtl2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_prddtl2"
+                    android:background="@drawable/shape_border_productview_list_item"
+                    android:padding="5dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/img_opt_select2"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/shape_option_select" />
+
+                    <TextView
+                        android:id="@+id/txt_dtlnam_select2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+
+                        android:layout_toLeftOf="@id/txt_totamt_select2"
+                        android:layout_toRightOf="@id/img_opt_select2"
+                        android:gravity="center_vertical"
+                        android:minHeight="38dp"
+                        android:text="아메리카노 HOT"
+                        android:textColor="#333333"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/txt_totamt_select2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="-500 원"
+                        android:textColor="#333333"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_option_list_item2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/lay_select_prddtl2"
+
+                    android:orientation="vertical"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/layout_prddtl3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_option_list_item2"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/txt_dtlnum3"
+                        style="@style/textview_default01"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txt_dtlnam3"
+                        style="@style/spinner_default01"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#666666"
+                        android:minHeight="50dp"
+                        android:textColor="#ffffff"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_totamt3"
+                        style="@style/textview_default01"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lay_select_prddtl3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_prddtl3"
+                    android:background="@drawable/shape_border_productview_list_item"
+                    android:padding="5dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/img_opt_select3"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/shape_option_select" />
+
+                    <TextView
+                        android:id="@+id/txt_dtlnam_select3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+
+                        android:layout_toLeftOf="@id/txt_totamt_select3"
+                        android:layout_toRightOf="@id/img_opt_select3"
+                        android:gravity="center_vertical"
+                        android:minHeight="38dp"
+                        android:text="아메리카노 HOT"
+                        android:textColor="#333333"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/txt_totamt_select3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="-500 원"
+                        android:textColor="#333333"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_option_list_item3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/lay_select_prddtl3"
+
+                    android:orientation="vertical"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btn_close"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:drawableTint="@color/sgreen"
+            android:background="@color/sgreen"
+
+            android:text="닫기"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
