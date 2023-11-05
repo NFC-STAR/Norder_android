@@ -1343,6 +1343,7 @@ public class MainActivity extends FragmentActivity {
         jsonData.put("RCNTYP", "T");
         jsonData.put("RCNSEQ", RCNSEQ);
         jsonData.put("product", product);
+        jsonData.put("EQUTYP", 'T');
         jsonData.put("FLRSEQ", flrseq);
         jsonData.put("TBLSEQ", tblseq);
 

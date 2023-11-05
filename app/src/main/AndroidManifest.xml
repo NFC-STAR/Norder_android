@@ -65,6 +65,15 @@
             android:name=".StoreSettingActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
+
+        <activity
+            android:exported="false"
+            android:name=".util.AlertDialogActivity"
+            android:theme="@style/Theme.AppCompat.Light.Dialog">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

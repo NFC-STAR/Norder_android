@@ -6,12 +6,14 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.PowerManager;
 import android.util.Log;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.core.app.NotificationCompat;
 import androidx.work.OneTimeWorkRequest;
 import androidx.work.WorkManager;
@@ -20,6 +22,9 @@ import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 import com.nfcstar.norder.MainActivity;
 import com.nfcstar.norder.R;
+import com.nfcstar.norder.util.AlertDialogActivity;
+import com.nfcstar.norder.util.SimpleAlertDialog;
+import com.nfcstar.norder.util.SoundPlayer;
 
 public class NstarFirebaseMessagingService extends FirebaseMessagingService {
 
@@ -154,7 +159,7 @@ public class NstarFirebaseMessagingService extends FirebaseMessagingService {
                         .setContentText(messageBody)
                         .setAutoCancel(true)
                         .setSound(defaultSoundUri);
-                        //.setContentIntent(pendingIntent);
+        //.setContentIntent(pendingIntent);
 
         NotificationManager notificationManager =
                 (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
@@ -171,8 +176,35 @@ public class NstarFirebaseMessagingService extends FirebaseMessagingService {
                     PowerManager.ON_AFTER_RELEASE, "My:Tag");
             wakeLock.acquire(5000);
 
+
+            SoundPlayer mPlayer = SoundPlayer.create(getApplicationContext(), R.raw.alarm);
+            mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                @Override
+                public void onCompletion(MediaPlayer mediaPlayer) {
+                    Log.d("debug", "completed");
+                }
+            });
+            mPlayer.play();
         }
 
         notificationManager.notify(99 /* ID of notification */, notificationBuilder.build());
+
+        // SimpleAlertDialog alertDialog = new SimpleAlertDialog(getApplicationContext(), messageBody);
+        // alertDialog.show();
+        AlertDialogActivity alertDialogActivity = AlertDialogActivity.alertDialogActivity;
+        AlertDialog.Builder alertDialogBuilder = AlertDialogActivity.alertDialogBuilder;
+        AlertDialog alertDialog = AlertDialogActivity.alertDialog;
+        if (alertDialogActivity != null && alertDialog != null && alertDialogBuilder != null) {
+            Log.e("이거", "뭐냐");
+            // alertDialogActivity.alert(title, msg);
+            alertDialogActivity.alert("", messageBody);
+        } else { //If it doesn't work in the "if"
+            Log.e("이거", "?!?");
+            Intent intentDialog = new Intent(getApplicationContext(), AlertDialogActivity.class);
+            intentDialog.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intentDialog.putExtra("title", "");
+            intentDialog.putExtra("body", messageBody);
+            startActivity(intentDialog);
+        }
     }
 }
