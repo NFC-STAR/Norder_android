@@ -990,7 +990,7 @@ public class MainActivity extends FragmentActivity {
                         if (orderDetailDialog != null && orderDetailDialog.isShowing())
                             orderDetailDialog.dismiss();
                         orderDetailDialog = new OrderDetailDialog(context, array_order, totamt);
-                        handlerOrderDetailDismiss.sendEmptyMessageDelayed(87, 200000);
+                        handlerOrderDetailDismiss.sendEmptyMessageDelayed(87, 10000);
                         orderDetailDialog.show();
                     } else {
 
@@ -1343,7 +1343,7 @@ public class MainActivity extends FragmentActivity {
         jsonData.put("RCNTYP", "T");
         jsonData.put("RCNSEQ", RCNSEQ);
         jsonData.put("product", product);
-        jsonData.put("EQUTYP", 'T');
+        jsonData.put("EQUTYP", 'T'); //
         jsonData.put("FLRSEQ", flrseq);
         jsonData.put("TBLSEQ", tblseq);
 
@@ -1447,6 +1447,7 @@ public class MainActivity extends FragmentActivity {
         jsonData.put("USERPW", pw);
         jsonData.put("STOSEQ", stoseq);
         jsonData.put("RCNTYP", "T");
+        jsonData.put("EQUTYP", 'T'); // 1
         jsonData.put("RCNSEQ", RCNSEQ);
         jsonData.put("product", product);
         jsonData.put("FLRSEQ", flrseq);
@@ -1618,6 +1619,7 @@ public class MainActivity extends FragmentActivity {
         jsonData.put("CSHAMT", payamt);
         jsonData.put("SAL005", "30");
         jsonData.put("INPAMT", payamt);
+        // jsonData.put("EQUTYP", "T"); //2
         jsonData.put("product", product_array);
         Gson gson = new Gson();
         String jsonDataStr = gson.toJson(jsonData);
@@ -1833,6 +1835,7 @@ public class MainActivity extends FragmentActivity {
         jsonData.put("RCTSEQ", rctseq);
         jsonData.put("gubun", gubun);
         jsonData.put("S_USERID", id);
+        // jsonData.put("EQUTYP", "T"); // 3
         jsonData.put("resultCode", resultCode);
         jsonData.put("appPrice", appPrice + "");
         jsonData.put("intMon", intMon);
