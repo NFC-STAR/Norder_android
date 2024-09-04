@@ -7,62 +7,105 @@
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".StoreSettingActivity">
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:gravity="center"
-    android:orientation="horizontal">
-    <CheckBox
-        android:id="@+id/chk_payment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="체크시 결제 사용"
-        android:textSize="18dp"
-        android:textColor="@color/black"/>
 
-    <Button
-        android:id="@+id/btn_paylist"
-        android:layout_width="90dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="30dp"
-        android:background="@drawable/shp_black_c5_rect"
-        android:text="결제 내역"/>
-
-</LinearLayout>
-
-
-    <EditText
-        android:id="@+id/edit_catid"
-        android:layout_width="300dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="30dp"
-        android:inputType="numberDecimal"
-        android:singleLine="true"
-        android:hint="단말기 번호 입력(catid/tid)"
-        android:textSize="18dp"/>
-
-    <Button
-        android:id="@+id/btn_save"
-        android:layout_width="300dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="30dp"
-        android:textSize="18dp"
-        android:text="저장"/>
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="30dp"
-        android:gravity="right">
-        <Button
-            android:id="@+id/btn_logout"
-            android:layout_width="wrap_content"
-            android:paddingEnd="20dp"
-            android:paddingStart="20dp"
-            android:layout_height="60dp"
-            android:textSize="18dp"
-            android:text="로그아웃"/>
-    </LinearLayout>
+        android:layout_height="wrap_content">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/chk_payment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="체크시 결제 사용"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+
+                    <Button
+                        android:id="@+id/btn_paylist"
+                        android:layout_width="90dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="30dp"
+                        android:background="@drawable/shp_black_c5_rect"
+                        android:text="결제 내역" />
+
+                </LinearLayout>
+
+
+                <EditText
+                    android:id="@+id/edit_catid"
+                    android:layout_width="300dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="30dp"
+                    android:hint="단말기 번호 입력(catid/tid)"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:textSize="18dp" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/chk_massge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="체크시 알림 메세지 사용"
+                        android:checked="true"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_save"
+                    android:layout_width="300dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="30dp"
+                    android:text="저장"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="right">
+
+                <Button
+                    android:id="@+id/btn_logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:text="로그아웃"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

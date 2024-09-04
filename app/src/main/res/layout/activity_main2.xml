@@ -45,8 +45,8 @@
                     <ImageView
                         android:id="@+id/iv_stoimg"
                         android:layout_width="wrap_content"
-                        android:clipToOutline="true"
-                        android:layout_height="73px" />
+                        android:layout_height="73px"
+                        android:clipToOutline="true" />
                 </LinearLayout>
 
 

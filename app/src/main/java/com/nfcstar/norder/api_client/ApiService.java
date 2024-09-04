@@ -42,8 +42,10 @@ public interface ApiService {
     @POST("mobile/pos/getOption.do")
     Call<String> getOption(@FieldMap Map<String, Object> fieldMap);
 
+    @FormUrlEncoded
     @POST("mobile/pos/sale.do")
     Call<String> setSale(@Body String s);
+
     @FormUrlEncoded
     @POST("mobile/customer/call_insert.do")
     Call<String> callInsert(@FieldMap Map<String, Object> fieldMap);
@@ -52,6 +54,7 @@ public interface ApiService {
     @POST("mobile/customer/call_select.do")
     Call<String> getCall(@FieldMap Map<String, Object> fieldMap);
 
+    @FormUrlEncoded
     @POST("mobile/pos/setPay.do")
     Call<String> setPay(@Body String s);
 

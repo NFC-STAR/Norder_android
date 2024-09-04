@@ -12,8 +12,7 @@ import retrofit2.converter.scalars.ScalarsConverterFactory;
 public class RetrofitAPI {
     private final ApiService apiService;
     private static final String API_HOST = "https://nfcstar.com/";
-  // private static final String API_HOST = "http://192.168.0.200:8085/";
-    //private static final String API_HOST = "59.22.93.204:8085/";
+  // private static final String API_HOST = "http://192.168.0.200:8085/";// private static final String API_HOST = "http://118.47.26.99:8085/";
   //  private static final String API_HOST = "http://192.168.0.200:8085/";
 
     public static String getHost(){

@@ -6,6 +6,7 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.media.RingtoneManager;
 import android.net.Uri;
@@ -23,6 +24,8 @@ import com.google.firebase.messaging.RemoteMessage;
 import com.nfcstar.norder.MainActivity;
 import com.nfcstar.norder.R;
 import com.nfcstar.norder.util.AlertDialogActivity;
+import com.nfcstar.norder.util.Cnst;
+import com.nfcstar.norder.util.Pref;
 import com.nfcstar.norder.util.SimpleAlertDialog;
 import com.nfcstar.norder.util.SoundPlayer;
 
@@ -145,66 +148,70 @@ public class NstarFirebaseMessagingService extends FirebaseMessagingService {
      * @param messageBody FCM message body received.
      */
     private void sendNotification(String messageBody) {
-        Intent intent = new Intent(this, MainActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0 /* Request code */, intent,
-                PendingIntent.FLAG_IMMUTABLE);
+        SharedPreferences pref =  Pref.getInstance().init(getApplicationContext());
+        Log.e("FCM 테스트", pref.getBoolean(Cnst.USEMSG,true)+"");
+        if(pref.getBoolean(Cnst.USEMSG,true)) {
+            Intent intent = new Intent(this, MainActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            PendingIntent pendingIntent = PendingIntent.getActivity(this, 0 /* Request code */, intent,
+                    PendingIntent.FLAG_IMMUTABLE);
 
-        String channelId = getString(R.string.default_notification_channel_id);
-        Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
-        NotificationCompat.Builder notificationBuilder =
-                new NotificationCompat.Builder(this, channelId)
-                        .setSmallIcon(R.drawable.ntable)
-                        .setContentTitle("엔테이블")
-                        .setContentText(messageBody)
-                        .setAutoCancel(true)
-                        .setSound(defaultSoundUri);
-        //.setContentIntent(pendingIntent);
+            String channelId = getString(R.string.default_notification_channel_id);
+            Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+            NotificationCompat.Builder notificationBuilder =
+                    new NotificationCompat.Builder(this, channelId)
+                            .setSmallIcon(R.drawable.ntable)
+                            .setContentTitle("엔테이블")
+                            .setContentText(messageBody)
+                            .setAutoCancel(true)
+                            .setSound(defaultSoundUri);
+            //.setContentIntent(pendingIntent);
 
-        NotificationManager notificationManager =
-                (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+            NotificationManager notificationManager =
+                    (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
-        // Since android Oreo notification channel is needed.
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            NotificationChannel channel = new NotificationChannel(channelId,
-                    "Channel human readable title",
-                    NotificationManager.IMPORTANCE_DEFAULT);
-            notificationManager.createNotificationChannel(channel);
-            PowerManager powerManager = (PowerManager) this.getSystemService(Context.POWER_SERVICE);
-            PowerManager.WakeLock wakeLock = powerManager.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK |
-                    PowerManager.ACQUIRE_CAUSES_WAKEUP |
-                    PowerManager.ON_AFTER_RELEASE, "My:Tag");
-            wakeLock.acquire(5000);
+            // Since android Oreo notification channel is needed.
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                NotificationChannel channel = new NotificationChannel(channelId,
+                        "Channel human readable title",
+                        NotificationManager.IMPORTANCE_DEFAULT);
+                notificationManager.createNotificationChannel(channel);
+                PowerManager powerManager = (PowerManager) this.getSystemService(Context.POWER_SERVICE);
+                PowerManager.WakeLock wakeLock = powerManager.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK |
+                        PowerManager.ACQUIRE_CAUSES_WAKEUP |
+                        PowerManager.ON_AFTER_RELEASE, "My:Tag");
+                wakeLock.acquire(5000);
 
 
-            SoundPlayer mPlayer = SoundPlayer.create(getApplicationContext(), R.raw.alarm);
-            mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                @Override
-                public void onCompletion(MediaPlayer mediaPlayer) {
-                    Log.d("debug", "completed");
-                }
-            });
-            mPlayer.play();
-        }
+                SoundPlayer mPlayer = SoundPlayer.create(getApplicationContext(), R.raw.alarm);
+                mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mediaPlayer) {
+                        Log.d("debug", "completed");
+                    }
+                });
+                mPlayer.play();
+            }
 
-        notificationManager.notify(99 /* ID of notification */, notificationBuilder.build());
+            notificationManager.notify(99 /* ID of notification */, notificationBuilder.build());
 
-        // SimpleAlertDialog alertDialog = new SimpleAlertDialog(getApplicationContext(), messageBody);
-        // alertDialog.show();
-        AlertDialogActivity alertDialogActivity = AlertDialogActivity.alertDialogActivity;
-        AlertDialog.Builder alertDialogBuilder = AlertDialogActivity.alertDialogBuilder;
-        AlertDialog alertDialog = AlertDialogActivity.alertDialog;
-        if (alertDialogActivity != null && alertDialog != null && alertDialogBuilder != null) {
-            Log.e("이거", "뭐냐");
-            // alertDialogActivity.alert(title, msg);
-            alertDialogActivity.alert("", messageBody);
-        } else { //If it doesn't work in the "if"
-            Log.e("이거", "?!?");
-            Intent intentDialog = new Intent(getApplicationContext(), AlertDialogActivity.class);
-            intentDialog.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            intentDialog.putExtra("title", "");
-            intentDialog.putExtra("body", messageBody);
-            startActivity(intentDialog);
+            // SimpleAlertDialog alertDialog = new SimpleAlertDialog(getApplicationContext(), messageBody);
+            // alertDialog.show();
+            AlertDialogActivity alertDialogActivity = AlertDialogActivity.alertDialogActivity;
+            AlertDialog.Builder alertDialogBuilder = AlertDialogActivity.alertDialogBuilder;
+            AlertDialog alertDialog = AlertDialogActivity.alertDialog;
+            if (alertDialogActivity != null && alertDialog != null && alertDialogBuilder != null) {
+                Log.e("이거", "뭐냐");
+                // alertDialogActivity.alert(title, msg);
+                alertDialogActivity.alert("", messageBody);
+            } else { //If it doesn't work in the "if"
+                Log.e("이거", "?!?");
+                Intent intentDialog = new Intent(getApplicationContext(), AlertDialogActivity.class);
+                intentDialog.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intentDialog.putExtra("title", "");
+                intentDialog.putExtra("body", messageBody);
+                startActivity(intentDialog);
+            }
         }
     }
 }

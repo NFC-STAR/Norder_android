@@ -12,6 +12,7 @@ public class Cnst {
     public static String FLRNAM_ = "0x2198be18nj23";
     public static String RCNSEQ_ = "0xc9un812jbk";
     public static String USEPAY = "jhhka9821kj138ba";
+    public static String USEMSG = "v12348912hjg3c87";
     public static String jtnet_catid = "128n37918d92eduj189";
 
     public static String PayFinList = "by17cih3r198cfc7";

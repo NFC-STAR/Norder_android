@@ -14,7 +14,7 @@ import com.nfcstar.norder.util.Cnst;
 import com.nfcstar.norder.util.Pref;
 
 public class StoreSettingActivity extends AppCompatActivity {
-    CheckBox chk_payment;
+    CheckBox chk_payment, chk_massge;
     EditText edit_catid;
     Button btn_save, btn_logout;
 
@@ -25,16 +25,19 @@ public class StoreSettingActivity extends AppCompatActivity {
         Context context = this;
        SharedPreferences pref =  Pref.getInstance().init(context);
         chk_payment = findViewById(R.id.chk_payment);
+        chk_massge = findViewById(R.id.chk_massge);
         edit_catid = findViewById(R.id.edit_catid);
         btn_save = findViewById(R.id.btn_save);
         btn_logout = findViewById(R.id.btn_logout);
         Button btn_paylist = findViewById(R.id.btn_paylist);
         chk_payment.setChecked(pref.getBoolean(Cnst.USEPAY,false));
+        chk_massge.setChecked(pref.getBoolean(Cnst.USEMSG,false));
         edit_catid.setText(pref.getString(Cnst.jtnet_catid,""));
         btn_save.setOnClickListener(v->{
             SharedPreferences.Editor editor = Pref.getEditor();
             editor.putBoolean(Cnst.USEPAY,chk_payment.isChecked());
             editor.putString(Cnst.jtnet_catid,edit_catid.getText().toString().trim());
+            editor.putBoolean(Cnst.USEMSG,chk_massge.isChecked());
             editor.apply();
             finish();
         });

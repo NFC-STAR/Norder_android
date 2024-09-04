@@ -548,6 +548,7 @@ public class CustomOptionDialog extends Dialog {
         map.put("PRDNUM", product_jo.getAsString("PRDNUM"));
         map.put("PRDNAM", product_jo.getAsString("PRDNAM"));
         map.put("PRDIMG", product_jo.getAsString("PRDIMG_PTH") + "/" + product_jo.getAsString("PRDIMG_NAM"));
+        map.put("PRTNUM", product_jo.getAsString("PRTNUM"));
         map.put("DTLNUM1", dtlnum1);
         map.put("DTLNUM2", dtlnum2);
         map.put("DTLNUM3", dtlnum3);

@@ -1242,7 +1242,9 @@ public class MainActivity extends FragmentActivity {
                 jo.getAsString("RCNNUM", "1"),
                 jo.getAsString("TELNUM", "TABLET"),
                 jo.getAsString("USERID"),
-                jo.getAsString("PRDIMG")));
+                jo.getAsString("PRDIMG"),
+                jo.getAsString("PRTNUM")
+                ));
         saleProductListAdapter.setSaleProductDataArrayList(productListData);
         setTotalMoney();
         //CartOpenLogic(true);
@@ -1269,6 +1271,7 @@ public class MainActivity extends FragmentActivity {
             temp.put("TELNUM", data.getTelnum());
             temp.put("TOTAMT", data.getTotamt());
             temp.put("RCNNUM", data.getRcnnum());
+            temp.put("PRTNUM", data.getPrtnum());
             /*
             String salqty = txt_salqty.getText().toString();
             temp.put("PRDSTS", txt_prdsts.getText().toString());
